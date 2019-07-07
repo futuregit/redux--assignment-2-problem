@@ -8,7 +8,7 @@ class Persons extends Component {
         persons: []
     }
 
-  
+
 
     render () {
         return (
@@ -35,7 +35,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onPersonHandler: () => dispatch({type: 'ADD_PERSON'}),
+    onPersonHandler: (name, age) => dispatch({type: 'ADD_PERSON', personData:{name:name, age:age}}),
     onPersonDeleteHandler: (personId) => dispatch({type: 'DELETE_PERSON', value: personId})
 
   }
